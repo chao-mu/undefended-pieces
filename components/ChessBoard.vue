@@ -99,8 +99,8 @@ const onSquareClick = (event) => {
 
 <style scoped lang="scss">
 $square-size: 5rem;
-$black-clr: #A85D2B;
-$white-clr: #FFEBCD;
+$dark-clr: #769655;
+$light-clr: #efeed2;
 
 .rank {
   border-left: solid;
@@ -116,20 +116,20 @@ $white-clr: #FFEBCD;
 }
 
 .rank:nth-child(odd) .square:nth-child(odd) {
-  background-color: $white-clr;
+  background-color: $light-clr;
 }
 
 .rank:nth-child(odd) .square:nth-child(even) {
-  background-color: $black-clr;
+  background-color: $dark-clr;
 }
 
 
 .rank:nth-child(even) .square:nth-child(odd) {
-  background-color: $black-clr;
+  background-color: $dark-clr;
 }
 
 .rank:nth-child(even) .square:nth-child(even) {
-  background-color: $white-clr;
+  background-color: $light-clr;
 }
 
 .rank {
@@ -185,7 +185,7 @@ $square-assets: "black-bishop", "black-knight", "black-rook", "white-bishop", "w
 @each $asset in $square-assets {
   .square.#{$asset} {
     background: url("/images/chessboard/#{$asset}.svg");
-    background-size: 80% 80%;
+    background-size: 90% 90%;
     background-position: center;
     background-repeat: no-repeat;
   }
