@@ -17,6 +17,7 @@
   },
   "dependencies": {
     "chess.js": "^1.0.0-beta.5",
+    "normalize.css": "^8.0.1",
     "sass": "^1.62.0",
     "vue3-chessboard": "^1.1.5"
   }

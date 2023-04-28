@@ -98,7 +98,6 @@ const onSquareClick = (event) => {
 </template>
 
 <style scoped lang="scss">
-$square-size: 5rem;
 $dark-clr: #769655;
 $light-clr: #efeed2;
 
@@ -132,19 +131,19 @@ $light-clr: #efeed2;
   background-color: $light-clr;
 }
 
-.rank {
-  height: $square-size;
-  width: calc($square-size * 8);
-  flex-wrap: nowrap;
-  flex-direction: row;
+.board {
+  background-color: red;
   display: flex;
+  flex-direction: column;
+  flex: 1;
 }
 
-.board {
+.rank {
+  width: 100%;
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
+  flex: 1;
 }
 
 .square {
@@ -190,7 +189,6 @@ $square-assets: "black-bishop", "black-knight", "black-rook", "white-bishop", "w
     background-repeat: no-repeat;
   }
 }
-
 </style>
 
 

@@ -130,11 +130,113 @@ function selectSquare(id: string) {
 }
 </script>
 
-<style scoped>
+<style scoped lang="scss">
+$default-board-size: 720px;
+
+
+.app {
+  min-height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  background-color: #f0f0f0;
+}
+
+.container {
+  flex-direction: column;
+}
+
+.container > * {
+  width: $default-board-size;
+}
+
+main {
+  height: $default-board-size;
+  display: flex;
+}
+
+/* Media query for mobile */
+@media (max-width: $default-board-size) {
+  main {
+    width: 100vw;
+    height: 100vw; 
+  }
+
+  .container > * {
+    width: 100%;
+  }
+}
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+  margin-top: auto;
+  text-align: center;
+  margin: 1rem;
+}
+
+.high-score {
+  font-size: 1.5rem;
+  text-align: left;
+}
+
+.title {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.explainer {
+  font-size: 16px;
+  font-style: italic;
+  text-align: center;
+  color: #666;
+}
+
+.status {
+  display: flex;
+  justify-content: space-around;
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+
+.last-fen, .fen {
+  font-size: 1.5rem;
+  text-align: center;
+  text-align: left;
+}
+
+main {
+  background-color: #2980b9;
+}
+</style>
+
+<!-- style scoped>
+main {
+  flex-grow: 1;
+}
+
 .app {
   display: flex;
   flex-direction: column;
-  width: 720px;
+  width: 100%;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.container {
+  max-width: 720px;
 }
 
 footer {
@@ -185,22 +287,28 @@ footer {
   justify-content: space-between;
   gap: 0.5rem;
 }
-</style>
+</!-->
 
 <template>
   <div class="app">
-    <div class="title">Click Undefended Non-King Pieces/Pawns</div>
-    <div class="explainer">Oriented with white on bottom</div>
-    <ChessBoard :squares="squares" @squareClick='selectSquare'/>
-    <footer>
-      <div class="status">
-        <div class="score">Score: {{ score }}</div>
-        <div class="indicator">{{ indicator }}</div>
-      </div>
-      <div class="high-score">High Score: {{ highScore }}</div>
-      <div class="fen">FEN: {{ currentFen }}</div>
-      <div class="last-fen" v-if="lastFen">Last FEN: <a href="#" @click.prevent='nextGame(lastFen)'>{{ lastFen }}</a></div>
-    </footer>
+    <div class="container">
+      <header>
+        <div class="title">Click Undefended Non-King Pieces/Pawns</div>
+        <div class="explainer">Oriented with white on bottom</div>
+      </header>
+      <main>
+        <ChessBoard :squares="squares" @squareClick='selectSquare'/>
+      </main>
+      <footer>
+        <div class="status">
+          <div class="score">Score: {{ score }}</div>
+          <div class="indicator">{{ indicator }}</div>
+        </div>
+        <div class="high-score">High Score: {{ highScore }}</div>
+        <div class="fen">FEN: {{ currentFen }}</div>
+        <div class="last-fen" v-if="lastFen">Last FEN: <a href="#" @click.prevent='nextGame(lastFen)'>{{ lastFen }}</a></div>
+      </footer>
+    </div>
   </div>
 </template>
 
