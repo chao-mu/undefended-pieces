@@ -6,7 +6,7 @@ import { onMounted, ref } from 'vue'
 import { Chess } from 'chess.js'
 
 // Ours
-import FENS from "@/src/fen";
+import FENS from "@/src/fens";
 
 const currentFen = ref("")
 const lastFen = ref("")
