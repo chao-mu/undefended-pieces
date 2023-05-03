@@ -135,7 +135,6 @@ $light-clr: #efeed2;
   background-color: red;
   display: flex;
   flex-direction: column;
-  flex: 1;
 }
 
 .rank {
@@ -183,7 +182,7 @@ $square-assets: "black-bishop", "black-knight", "black-rook", "white-bishop", "w
 
 @each $asset in $square-assets {
   .square.#{$asset} {
-    background: url("/images/chessboard/#{$asset}.svg");
+    background: url("/images/chessboard/#{$asset}.png");
     background-size: 90% 90%;
     background-position: center;
     background-repeat: no-repeat;
