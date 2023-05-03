@@ -112,8 +112,11 @@ function selectSquare(id: string) {
   <div class="app bg-gray-100 min-h-screen flex flex-col items-center">
     <div class="container flex flex-col max-w-2xl mx-auto bg-white shadow-lg rounded-lg overflow-hidden mt-4 items-stretch">
       <header class="bg-gray-800 text-white px-4 py-2">
-        <div class="title text-3xl font-bold">Click Undefended Non-King Pieces/Pawns</div>         
-        <div class="explainer text-lg">Oriented with white on bottom</div>
+        <div class="title text-3xl font-bold">Click Undefended Pieces/Pawns</div>         
+        <div class="explainer text-lg flex justify-between">
+          <div>Kings can't defend attacked pieces.</div>
+          <div>Oriented with white on bottom.</div>
+        </div>
       </header>                                       
       <main class="px-4 py-2">
         <ChessBoard class="board m-auto aspect-square" :squares="squares" @squareClick='selectSquare'/>
