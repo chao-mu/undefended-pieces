@@ -3,7 +3,8 @@ node_modules
 .nuxt
 .nitro
 .cache
-.output
+.output/*
+!.output/public
 .env
 dist
 .DS_Store
