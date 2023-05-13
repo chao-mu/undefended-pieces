@@ -3,7 +3,7 @@
 import { onMounted, ref } from 'vue'
 
 // Ours
-import FENS from "@/src/fens";
+import FENS from "@/assets/fens";
 
 const currentFen = ref("")
 const lastFen = ref("")

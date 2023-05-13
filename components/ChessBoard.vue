@@ -150,6 +150,12 @@ $light-clr: #efeed2;
   position: relative;
 }
 
+.box {
+  border: solid;
+  border-width: 0.2rem;
+  border-color: purple;
+}
+
 .square.selected::after, .square.correct::after, .square.incorrect::after {
   content: "";
   display: block;

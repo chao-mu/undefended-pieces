@@ -2123,6 +2123,11 @@ chardet@^0.7.0:
   resolved "https://registry.npmjs.org/chardet/-/chardet-0.7.0.tgz"
   integrity sha512-mT8iDcrh03qDGRRmoA2hmBJnxpllMR+0/0qlzjqZES6NdiWDcZkCNAk4rPFZ9Q85r27unkiNNg8ZOiwZXBHwcA==
 
+chess.js@^1.0.0-beta.5:
+  version "1.0.0-beta.5"
+  resolved "https://registry.npmjs.org/chess.js/-/chess.js-1.0.0-beta.5.tgz"
+  integrity sha512-ZmSBraFoGrLCiC7m5vwPax02KoKFjC+3uQrlDYKoORUi8MY+7qceDXQW1ho0Gt6pylGCzTTTBa6gy55bOXp2Jw==
+
 chokidar@^3.4.2, chokidar@^3.5.1, chokidar@^3.5.3, "chokidar@>=3.0.0 <4.0.0":
   version "3.5.3"
   resolved "https://registry.npmjs.org/chokidar/-/chokidar-3.5.3.tgz"
